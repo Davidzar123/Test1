@@ -25,5 +25,8 @@ RUN useradd -m -s /bin/bash student \
 
 RUN mkdir -p /backups && chown student:student /backups
 
+RUN mkdir -p /run/sshd
+
 CMD ["/usr/sbin/sshd", "-D"]
+
 
